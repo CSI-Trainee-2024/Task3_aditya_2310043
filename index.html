@@ -1,24 +1,41 @@
-<style>
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font: inherit;
-    vertical-align: baseline;
-  }
 
-  body {
-    background: black;
-    margin: 0;
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font: inherit;
+      vertical-align: baseline;
+      overflow: hidden;
+    }
+  
+    body {
+      background: black;
+      margin: 0;
+    }
+  
+    canvas {
+      width: 100%;
+      height: 100%;
+    }
+    p{
+       text-align: center;
+       font-size: 7rem;
+       color: white;
+    }
 
-  canvas {
-    width: 1024px;
-    height: 576px;
-  }
-</style>
-<canvas style="image-rendering: pixelated"></canvas>
+  </style>
+</head>
+<body>
+  <p id="gameOver"></p>
+  <canvas style="image-rendering: pixelated"></canvas>
 <script src="./data/l_New_Layer_1.js"></script>
 <script src="./data/l_New_Layer_2.js"></script>
 <script src="./data/l_New_Layer_4.js"></script>
@@ -37,3 +54,6 @@
 <!-- <script src="./classes/Oposum.js"></script> -->
 <script src="./js/index.js"></script>
 <script src="./js/eventListeners.js"></script>
+</body>
+</html>
+

@@ -89,7 +89,7 @@ class Player {
 
       c.save()
       if(this.isInvincible){
-        c.globalAlpha = 0.5
+        c.globalAlpha = 0.1
       } else{
         c.globalAlpha = 1
       }

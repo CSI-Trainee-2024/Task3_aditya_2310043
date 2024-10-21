@@ -1,4 +1,5 @@
 const canvas = document.querySelector("canvas");
+const gameOver = document.getElementById("gameOver")
 const c = canvas.getContext("2d");
 const dpr = window.devicePixelRatio || 1;
 
@@ -426,12 +427,16 @@ function animate(backgroundCanvas) {
 
       gems.splice(i,1)
       gemCount++;
+      if(gems.length === 0){
+        gameOver.innerHTML = "You Win";
+        console.log("YOU WIN !!!")
+      }
     }
   }
 
   // Track scroll post distance
 
-  if (player.x > SCROLL_POST_RIGHT) {
+  if (player.x > SCROLL_POST_RIGHT && player.x < 1650) {
     const scorllPostDistance = player.x - SCROLL_POST_RIGHT;
     camera.x = scorllPostDistance;
   }
@@ -446,7 +451,7 @@ function animate(backgroundCanvas) {
 
   // Render scene
   c.save();
-  c.scale(dpr + 169, dpr + 1);
+  c.scale(dpr + 1, dpr + 1);
   c.translate(-camera.x, camera.y);
   c.clearRect(0, 0, canvas.width, canvas.height);
   c.drawImage(oceanBackgroundcanvas, camera.x * 0.32, 0);
